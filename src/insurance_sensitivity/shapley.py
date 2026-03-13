@@ -1,4 +1,4 @@
-"""
+r"""
 Shapley effects for global sensitivity analysis.
 
 Shapley effects extend the Shapley value from cooperative game theory to
