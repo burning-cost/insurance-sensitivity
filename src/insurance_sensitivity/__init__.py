@@ -42,7 +42,12 @@ Typical usage::
 from insurance_sensitivity.sobol import SobolAnalysis, SobolResult
 from insurance_sensitivity.shapley import ShapleyEffects, ShapleyResult
 
-__version__ = "0.1.0"
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("insurance-sensitivity")
+except PackageNotFoundError:
+    __version__ = "0.0.0"  # not installed
 
 __all__ = [
     "SobolAnalysis",
